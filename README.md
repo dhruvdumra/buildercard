@@ -2,20 +2,6 @@
 
 Type a GitHub username, get a profile card: **top repos, main languages and recent activity**.
 
-**Live:** https://YOUR-APP.vercel.app &nbsp;·&nbsp; Shareable links: `/?u=torvalds`
-
-![Builder Card screenshot (demo data)](docs/screenshot.png)
-
-## Features
-
-- **Profile** – avatar, bio, company, location, website, join year, repo / follower counts, total stars earned.
-- **Top repositories** – your own (non-fork, non-archived) repos ranked by stars, then forks, then recency.
-- **Main languages** – share of original repos by primary language, top 5 + "Other", as a bar and legend.
-- **Recent activity** – the latest public events in plain English ("Merged PR #12 in …"), with repeated pushes collapsed (`×3`).
-- Accepts `octocat`, `@octocat` or a full `https://github.com/octocat` URL. Works for organisations too.
-- Avatar ring and card glow tinted by the user's language mix.
-- Shareable URLs (`?u=`), back/forward navigation, copy-link, dark theme, mobile layout.
-
 ## Error handling
 
 | Situation | What the user sees |
@@ -73,13 +59,3 @@ npm test        # unit tests
 Optional: `GITHUB_TOKEN=ghp_xxx npm run dev` to use an authenticated quota. A fine-grained token with **no** scopes is enough, since only public data is read.
 
 You can also open `index.html` through any static server (`npx serve .`). Without the proxy, it calls GitHub directly.
-
-## Deploy
-
-**Vercel (recommended):** import the repo. Framework preset "Other", no build command, no output directory. Optionally add `GITHUB_TOKEN` under Settings → Environment Variables.
-
-**Netlify / GitHub Pages:** deploy the folder as-is. The app runs in direct mode (60 requests/hour per visitor).
-
-## Time taken
-
-_TODO: fill in._
