@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Builder Card</title>
+  <meta name="description" content="Enter a GitHub username and get a profile card: top repos, main languages and recent activity." />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='black'/><circle cx='16' cy='16' r='7' fill='none' stroke='white' stroke-width='3'/></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="src/styles.css" />
+</head>
+<body>
+  <main class="shell">
+    <header class="masthead">
+      <span class="eyebrow">GitHub profile, at a glance</span>
+      <h1>Builder Card</h1>
+      <p>Top repos, languages and recent activity for any GitHub user.</p>
+    </header>
+
+    <form id="search" class="search" autocomplete="off" novalidate>
+      <label for="username" class="visually-hidden">GitHub username</label>
+      <input id="username" name="username" type="text" placeholder="GitHub username" spellcheck="false"
+             autocapitalize="off" maxlength="120" required />
+      <button type="submit" id="go">Search <kbd>↵</kbd></button>
+    </form>
+
+    <section id="result" aria-live="polite" aria-busy="false"></section>
+
+    <footer class="foot">
+      <span id="quota"></span>
+      <a href="https://github.com/dhruvdumra/builder-card" target="_blank" rel="noopener">Source</a>
+    </footer>
+  </main>
+  <script type="module" src="src/app.js"></script>
+</body>
+</html>
