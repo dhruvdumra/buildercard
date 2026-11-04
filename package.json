@@ -1,0 +1,12 @@
+{
+  "name": "builder-card",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Enter a GitHub username, get a builder profile card.",
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/dev.js",
+    "test": "node --test tests/*.test.js"
+  },
+  "engines": { "node": ">=18" }
+}
